@@ -1,11 +1,17 @@
-import { Component } from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
+import { AlbumListComponent } from './album-list.component';
+import { Album } from './album.model';
 
 @Component({
   selector: 'my-app',
+  directives: [AlbumListComponent],
   template: `
   <div class="container">
     <h1>CD Store</h1>
-    <h3 *ngFor="#album of albums">{{ album.name }}</h3>
+    <album-list
+      [albumList]="albums"
+      (onAlbumSelect)="albumWasSelected($event)">
+    </album-list>
   </div>
   `
 })
@@ -20,10 +26,7 @@ export class AppComponent {
       new Album("Folsom Prison", "Johnny Cash", 9, "country", 3),
     ];
   }
-}
-
-export class Album {
-  constructor(public name: string, public artist: string, public price: number, public genre: string, public id: number){
-
+  albumWasSelected(clickedAlbum: Album): void {
+    console.log('parent', clickedAlbum);
   }
 }
