@@ -9,6 +9,7 @@ import { AlbumListComponent } from './album-list.component';
     <h1>CD Store</h1>
     <album-list
       [albumList]="albums"
+      [artistList]="artists"
       (onAlbumSelect)="albumWasSelected($event)">
     </album-list>
   </div>
@@ -17,11 +18,15 @@ import { AlbumListComponent } from './album-list.component';
 
 export class AppComponent {
   public albums: Album[];
+  public artists: String[];
   constructor(){
+
+    this.artists = ["Nirvana", "Bo Diddley", "Wu-Tang Clan", "Johnny Cash"];
+
     this.albums = [
       new Album("Nevermind", "Nirvana", 9, "rock", 0),
       new Album("Hey Bo Diddley", "Bo Diddley", 8, "rock", 1),
-      new Album("Enter the Wu-Tang", "Wu-Tang Clan", 7, "rap", 2),
+      new Album("Enter the 36 Chambers", "Wu-Tang Clan", 7, "rap", 2),
       new Album("Folsom Prison", "Johnny Cash", 9, "country", 3),
     ];
   }
