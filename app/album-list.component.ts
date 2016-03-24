@@ -14,11 +14,12 @@ import {ArtistPipe} from './artist.pipe';
   directives: [AlbumComponent, NewAlbumComponent],
   template: `
   <select (change)="onChange($event.target.value)">
-    <option value="all" selected="selected">Show All</option>
+    <option value="all" selected="selected">Show All Genres</option>
     <option value="rock">Show Rock Albums</option>
     <option value="country">Show Country Albums</option>
   </select>
   <select (change)="onChange2($event.target.value)" class="filter">
+    <option value="all" selected="selected">Show All Artists</option>
 		<option *ngFor="#artist of artistList" value="{{artist}}">show {{artist}}</option>
 	</select>
   <album-display *ngFor="#currentAlbum of albumList | genre:filterGenre | artist: [filterArtist, artistList]"
@@ -35,7 +36,7 @@ export class AlbumListComponent {
   public onAlbumSelect: EventEmitter<Album>;
   public selectedAlbum: Album;
   public filterGenre: string = "all";
-  public filterArtist: string= "Nirvana";
+  public filterArtist: string= "all";
   constructor() {
     this.onAlbumSelect = new EventEmitter();
   }
@@ -57,5 +58,3 @@ export class AlbumListComponent {
     this.filterArtist = filterOption;
   }
 }
-
-//artist:[filterArtist, artistNameArray]

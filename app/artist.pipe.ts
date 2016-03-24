@@ -19,6 +19,8 @@ export class ArtistPipe implements PipeTransform {
         return input.filter((album) => {
           return (album.artist === artist);
         });
+      } else {
+        return input;
       }
     }
   }
