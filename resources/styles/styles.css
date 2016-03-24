@@ -5,3 +5,11 @@ h1 {
 .selected {
   color: #22bdf0;
 }
+
+ul {
+  display: none;
+}
+
+.selected ul {
+  display: block;
+}

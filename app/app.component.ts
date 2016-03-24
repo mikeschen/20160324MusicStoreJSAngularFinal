@@ -1,6 +1,5 @@
 import { Component, EventEmitter } from 'angular2/core';
 import { AlbumListComponent } from './album-list.component';
-import { Album } from './album.model';
 
 @Component({
   selector: 'my-app',
@@ -28,5 +27,12 @@ export class AppComponent {
   }
   albumWasSelected(clickedAlbum: Album): void {
     console.log('parent', clickedAlbum);
+  }
+}
+
+
+export class Album {
+  constructor(public name: string, public artist: string, public price: number, public genre: string, public id: number){
+
   }
 }
