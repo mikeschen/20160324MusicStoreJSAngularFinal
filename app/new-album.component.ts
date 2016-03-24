@@ -13,8 +13,10 @@ import { Album } from './album.model';
       <select #newGenre>
         <option value="rock" selected="selected">Rock</option>
         <option value="country">Country</option>
+        <option value="rap">Rap</option>
+        <option value="soul">Soul</option>
       </select>
-      <button (click)="addAlbum(newName, newArtist, newPrice, newGenre)" class="btn-success">Add</button>
+      <button (click)="addAlbum(newName, newArtist, newPrice, newGenre)" class="btn-warning">Add</button>
     </div>
     `
 })

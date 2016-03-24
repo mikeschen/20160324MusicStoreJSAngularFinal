@@ -17,6 +17,8 @@ import {ArtistPipe} from './artist.pipe';
     <option value="all" selected="selected">Show All Genres</option>
     <option value="rock">Show Rock Albums</option>
     <option value="country">Show Country Albums</option>
+    <option value="rap">Show Rap Albums</option>
+    <option value="soul">Show Soul Albums</option>
   </select>
   <select (change)="onChange2($event.target.value)" class="filter">
     <option value="all" selected="selected">Show All Artist Albums</option>
