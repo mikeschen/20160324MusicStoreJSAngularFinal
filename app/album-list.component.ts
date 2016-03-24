@@ -19,7 +19,7 @@ import {ArtistPipe} from './artist.pipe';
     <option value="country">Show Country Albums</option>
   </select>
   <select (change)="onChange2($event.target.value)" class="filter">
-    <option value="all" selected="selected">Show All Artists</option>
+    <option value="all" selected="selected">Show All Artist Albums</option>
 		<option *ngFor="#artist of artistList" value="{{artist}}">show {{artist}}</option>
 	</select>
   <album-display *ngFor="#currentAlbum of albumList | genre:filterGenre | artist: [filterArtist, artistList]"

@@ -21,13 +21,13 @@ export class AppComponent {
   public artists: String[];
   constructor(){
 
-    this.artists = ["Nirvana", "Bo Diddley", "Wu-Tang Clan", "Johnny Cash"];
+    this.artists = ["Bo Diddley", "Nirvana", "Wu-Tang Clan", "Johnny Cash"];
 
     this.albums = [
-      new Album("Nevermind", "Nirvana", 9, "rock", 0),
-      new Album("Hey Bo Diddley", "Bo Diddley", 8, "rock", 1),
-      new Album("Enter the 36 Chambers", "Wu-Tang Clan", 7, "rap", 2),
-      new Album("Folsom Prison", "Johnny Cash", 9, "country", 3),
+      new Album("Nevermind", "Nirvana", 9, "rock", 1),
+      new Album("Hey Bo Diddley", "Bo Diddley", 8, "rock", 2),
+      new Album("Enter the 36 Chambers", "Wu-Tang Clan", 7, "rap", 3),
+      new Album("Folsom Prison", "Johnny Cash", 9, "country", 4),
     ];
   }
   albumWasSelected(clickedAlbum: Album): void {

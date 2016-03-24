@@ -1,9 +1,9 @@
 h1 {
-  color: blue;
+  color: #150822;
 }
 
 .selected {
-  color: #22bdf0;
+  color: #4b717f;
 }
 
 ul {
@@ -12,4 +12,10 @@ ul {
 
 .selected ul {
   display: block;
+}
+
+body {
+  background-image: url(../../resources/images/cd.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
